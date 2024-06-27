@@ -1,4 +1,4 @@
-const baseUrl = "http://api.weatherapi.com/v1";
+const baseUrl = "https://api.weatherapi.com/v1";
 const endpoint = "/current.json";
 const apiKey = "c8951b16fc4b4a108b4104611242606";
 let query;
@@ -39,5 +39,9 @@ queryInput.addEventListener("change", () => {
       document.getElementById(
         "humidity"
       ).innerHTML = `${data.current.humidity}`;
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+      document.getElementById("content").innerText = "Not found";
     });
 });
