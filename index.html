@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./src/output.css" rel="stylesheet" />
+
+    <title>Weather App - All About Weather | Weather Details</title>
+  </head>
+  <body class="bg-sky-400 h-screen min-w-full">
+    <div
+      class="weather-app bg-white w-4/5 sm:w-2/5 lg:w-[35%] h-[80%] m-auto mt-10 rounded-lg"
+    >
+      <div class="heading text-sky-400 font-bold flex items-center p-2">
+        <img src="./media/left-arrow.svg" alt="left-arrow" />
+        <h1 class="lg:text-3xl">Weather App</h1>
+      </div>
+
+      <div class="input border-t border-gray-300 p-2 lg:h-16">
+        <input
+          class="w-full lg:h-full p-1 border border-gray-400 rounded-sm"
+          type="text"
+          placeholder="Enter city or country"
+        />
+      </div>
+
+      <div
+        class="border-t border-b border-gray-300 h-[65%] lg:h-[62%] text-center space-y-2 p-2"
+        id="content"
+      >
+        <img
+          src="./media/temp-icon.svg"
+          width="100"
+          alt="weather-icon"
+          class="m-auto"
+        />
+        <p class="temp text-5xl font-semibold">--&deg; C</p>
+        <p class="temp-details text-2xl">--</p>
+        <div class="location text-xl flex items-center justify-center">
+          <img src="./media/location.svg" alt="location" class="lg:w-[50px]" />
+          <span>-- --</span>
+        </div>
+      </div>
+
+      <div class="footer flex h-[12%] rounded-b-md">
+        <div
+          class="foot1 w-1/2 flex items-center justify-center gap-2 border-r border-gray-300"
+        >
+          <div class="icon">
+            <img src="./media/temp.svg" alt="temperature" />
+          </div>
+          <div class="info">
+            <p class="font-bold text-xs">
+              <span id="feels-like">--</span>&deg; C
+            </p>
+            <p class="font-bold text-xs">feels like</p>
+          </div>
+        </div>
+        <div class="foot2 flex items-center justify-center w-1/2 gap-2">
+          <div class="icon">
+            <img src="./media/humidity.svg" alt="humidity" />
+          </div>
+          <div class="info">
+            <p class="font-bold text-xs"><span id="humidity">--</span>%</p>
+            <p class="font-bold text-xs">Humidity</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
